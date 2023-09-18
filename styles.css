@@ -1,0 +1,128 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: seagreen;
+  font-family: "Baskerville", serif;
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+.task-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-right: 10px; /* Add right margin to create a gap */
+}
+
+input[type="text"] {
+  background-color: rgba(128, 128, 128, 0.2);
+  border: none;
+  padding: 10px;
+  color: white;
+  flex-grow: 1;
+  margin-right: 10px; /* Add right margin to create a gap */
+}
+
+#add-task {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: rgba(128, 128, 128, 0.5);
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: move;
+  display: flex;
+  align-items: center;
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow for rounded borders */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Add a slight shadow */
+}
+
+li:nth-child(even) {
+  background-color: rgba(128, 128, 128, 0.3);
+}
+
+li span {
+  color: white;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+li .arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+li .arrows button {
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+li .delete-button {
+  background-color: #D22B2B; /*Cadmium Red*/
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-left: auto;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .task-container {
+    flex-direction: column;
+  }
+
+  #add-task {
+    margin-top: 10px;
+    border-radius: 8px;
+  }
+}
+
+/* Prevent zooming out on mobile devices */
+
+@media (max-width: 768px) {
+  body {
+    zoom: 1;
+    -moz-transform: scale(1);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(1);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(1);
+    -webkit-transform-origin: 0 0;
+  }
+}
+
